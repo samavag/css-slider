@@ -1,3 +1,99 @@
 body {
     background: #f7f7f7;
 }
+b, strong {
+    font-weight: bold;
+}
+
+.target {
+    padding-top: 75px;
+}
+
+/*
+.target
+    &-gallery
+        ul, li
+.target-gallery ul,
+.target-gallery li {}       
+*/
+
+.target-gallery ul,
+.target-gallery li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;  
+}
+.target-gallery ul {
+    padding-top: 75px;
+}
+.target-items {
+    position: relative;
+}
+.target-items > div {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    transition: all .1s .2s ease;
+    transform: translateX(-10px);
+}
+.target-items > div:target {
+    opacity: 1;
+    transform: translateX(0);
+
+}
+.target-items > div:first-child {
+    opacity: 1;
+    z-index: 1;
+    transform: translateX(0);
+}
+.img {
+    width: 100%;
+    border-radius: 6px;
+}
+.target-list li {
+    border-top: 1px solid #d1d2d4;
+}
+.target-list li:first-child {
+    border: none;
+}
+.target-list li:first-child a {
+    margin-top: 0;
+    padding-top: 0;
+}
+.target-list h3 {
+    position: relative;
+    margin: 0 0 5px;
+    font-size: 18px;
+}
+.target-list h3::before {
+    font-family: 'Font Awesome 5 Free';
+    content: '\f0da';
+    font-size: 19px;
+    line-height: 0;
+    position: absolute;
+    top: 15px;
+    left: -16px;
+    transform: translateX(-4px);
+    transition: all .35s ease;
+    opacity: 0;
+}
+.target-list h3:hover::before{
+    opacity: 1;
+    transform: translateX(0);
+}
+.target-list p {
+    color: 777;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+.target-list a {
+    color: #444;
+}
+.target-list a:hover {
+    color: #d30f0f;   
+    display: block;
+    text-decoration: none;
+    padding: 24px 0;
+}
